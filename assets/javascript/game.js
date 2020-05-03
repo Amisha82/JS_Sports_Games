@@ -1,35 +1,61 @@
 
-let Team1
-shootButton = document.querySelector("#teamone-shoot-button");
-shootButton.addEventListener("click", function () {
+function getRandomshoot() {
+    var randomnum = Math.floor((Math.random() * 10) + 1);
+    return randomnum;
+}
 
-    console.log("team1_goal");
-    let newteam1_goal = Number("teamone - numgoals".innerHTML) + 1;
-    ("teamone-numgoals".innerHTML) = newteam1_goal;
+function play() {
+    var audio = new Audio('black-ops-2-hd-dsr-50-gun-sound-hq-download.mp3')
+    audio.play();
+};
 
+let team1_shootButton = document.querySelector("#teamone-shoot-button");
+let team1_shots = document.querySelector("#teamone-numshots");
+let team1_goals = document.querySelector("#teamone-numgoals");
+
+team1_shootButton.addEventListener("click", function () {
+
+    console.log("team1_shots");
+    team1_shots.innerHTML = Number(team1_shots.innerHTML) + 1;
+
+    var result = "f";
+    var rnum = getRandomshoot();
+
+    if (rnum == 2 || rnum == 7)
+        result = "p";
+
+    if (result == "p") {
+        console.log("team1_goals");
+        team1_goals.innerHTML = Number(team1_goals.innerHTML) + 1;
+    }
+    play();
 })
-let team2
-shootButton = document.querySelector("#teamtwo-shoot-button");
-shootButton.addEventListener("click", function () {
 
-    console.log("team2_goal")
-    let team2_goal = Number("teamtwo - numgoals".innerHTML) + 1;
-    ("teamtwo-numgoals".innerHTML) = "team2_goal";
+let team2_shootButton = document.querySelector("#teamtwo-shoot-button");
+let team2_shots = document.querySelector("#teamtwo-numshots");
+let team2_goals = document.querySelector("#teamtwo-numgoals");
+
+team2_shootButton.addEventListener("click", function () {
+
+    console.log("team2_shots");
+    team2_shots.innerHTML = Number(team2_shots.innerHTML) + 1;
+
+    var result = "f";
+    var rnum = getRandomshoot();
+
+    if (rnum == 4 || rnum == 7)
+        result = "p";
+
+    if (result == "p") {
+        console.log("team2_goals");
+        team2_goals.innerHTML = Number(team2_goals.innerHTML) + 1;
+    }
+
+    play();
 })
 
-/*function getRandomshoot(0 ,1) {
-    return Math.random() * (5 - 1) + 1;*/
-let
-    shotstakenButton = document.querySelector("#teamone-numshots");
 
-if (console.log(Math.random() * (5 - 1) + 1)); (console.log("success"));
-
-let
-    shotstakenButton2 = document.querySelector("#teamtwo-numshots");
-
-if (console.log(Math.random() * (5 - 1) + 1));
-(console.log("fail"));
-
+/*
 
 let count = 0;
 const resets = document.querySelector("#num-reset");
@@ -47,8 +73,30 @@ resetButton.addEventListener("click", function () {
 
 
 
-})
+})*/
+let resetButton = document.querySelector("#reset-button")
 
+
+resetButton.addEventListener("click", function () {
+
+    console.log("reset team1 shot");
+    team1_shots.innerHTML = Number(team1_shots.innerHTML) * 0;
+    play();
+
+    console.log("reset team2 shot");
+    team2_shots.innerHTML = Number(team2_shots.innerHTML) * 0;
+    play();
+
+    console.log("reset team1 goal");
+    team1_goals.innerHTML = Number(team1_goals.innerHTML) * 0;
+    play();
+
+    console.log("reset team2 goal");
+    team2_goals.innerHTML = Number(team2_goals.innerHTML) * 0;
+    play();
+
+
+})
 
 
 
