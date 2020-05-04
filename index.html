@@ -5,46 +5,40 @@
     <title>JS Game Challenge</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<script>
-    function play() {
-        var audio = new Audio('black-ops-2-hd-dsr-50-gun-sound-hq-download.mp3')
-        audio.play();
-    };
-</script>
-
-
-
 
 <body>
     <div>
-        <h1>My JS Game</h1>
+        <h1> My JS Game</h1>
         <div id="reset-container">
-            <button id="reset-button">RESET</button><br>
-            NUMBER OF RESETS: <span id="num-resets">0</span>
+            <button id="reset-button"><b>RESET</b></button><br>
+            <strong>
+                <label class="redtext">NUMBER OF RESETS: </label></strong><span id="num-resets">0</span>
         </div>
         <div class="clear"></div>
         <div class="left">
             <h2>
                 Team 1
             </h2>
-            <div class="goals">
-                SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
-                GOALS: <span id="teamone-numgoals">0</span>
+            <div class="goals"><strong>
+                    SHOTS TAKEN:</strong> <span id="teamone-numshots">0</span><br>
+                <strong> GOALS:</strong> <span id="teamone-numgoals">0</span>
             </div>
             <div>
-                <button id="teamone-shoot-button">SHOOT</button>
+                <button id="teamone-shoot-button">
+                    <b>SHOOT</b>
+                </button>
             </div>
         </div>
         <div class="right">
             <h2>
                 Team 2
             </h2>
-            <div class="goals">
-                SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
-                GOALS: <span id="teamtwo-numgoals">0</span>
+            <div class="goals"><strong>
+                    SHOTS TAKEN:</strong> <span id="teamtwo-numshots">0</span><br>
+                <strong> GOALS:</strong> <span id="teamtwo-numgoals">0</span>
             </div>
             <div>
-                <button id="teamtwo-shoot-button">SHOOT</button>
+                <button id="teamtwo-shoot-button"><b>SHOOT<b></button>
             </div>
         </div>
         <div class="clear"></div>

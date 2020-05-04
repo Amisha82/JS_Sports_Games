@@ -54,49 +54,35 @@ team2_shootButton.addEventListener("click", function () {
     play();
 })
 
-
-/*
-
-let count = 0;
-const resets = document.querySelector("#num-reset");
-const resetButton = document.querySelector("#reset-button");
-resetButton.addEventListener("click", function () {
-
-
-    if (console.log("team1_goal"));
-    let team1_goal = Number("teamone- numgoals".innerHTML) * 0;
-    ("teamone-numgoals".innerHTML) = "team1_goal";
-
-    if (console.log("team2_goal"));
-    let team2_goal = Number("teamtwo - numgoals".innerHTML) * 0;
-    ("teamtwo-numgoals".innerHTML) = "team2_goal";
-
-
-
-})*/
 let resetButton = document.querySelector("#reset-button")
 
-
 resetButton.addEventListener("click", function () {
 
+    if (Number(team1_goals.innerHTML) > Number(team2_goals.innerHTML))
+        alert("Team1 Wins");
+    else
+        alert("Team2 Wins");
+
     console.log("reset team1 shot");
-    team1_shots.innerHTML = Number(team1_shots.innerHTML) * 0;
-    play();
+    team1_shots.innerHTML = 0;
 
     console.log("reset team2 shot");
-    team2_shots.innerHTML = Number(team2_shots.innerHTML) * 0;
-    play();
+    team2_shots.innerHTML = 0;
 
     console.log("reset team1 goal");
-    team1_goals.innerHTML = Number(team1_goals.innerHTML) * 0;
-    play();
+    team1_goals.innerHTML = 0;
 
     console.log("reset team2 goal");
-    team2_goals.innerHTML = Number(team2_goals.innerHTML) * 0;
-    play();
+    team2_goals.innerHTML = 0;
 
 
-})
+
+
+    let NOreset = document.querySelector("#num-resets");
+    console.log("No of Reset");
+    NOreset.innerHTML = Number(NOreset.innerHTML) + 1;
+}
+)
 
 
 

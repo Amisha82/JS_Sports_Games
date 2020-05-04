@@ -1,3 +1,40 @@
+*{ background-color: aqua;
+   margin: 10px;    
+}
+
+
+#reset-button {
+    color: coral;
+    background-color: indigo;
+    padding: 15px;
+    letter-spacing: 3px;
+}
+h1 { color: mediumblue;}
+ 
+.redtext{
+  color:red;
+}
+h2 {
+    color: blue;
+}
+.goals{
+    color: crimson;
+    
+}
+#teamone-shoot-button{
+    color: coral;
+    background-color: indigo;
+    padding: 15px;
+    letter-spacing: 3px;
+
+}
+#teamtwo-shoot-button{
+    color: coral;
+    background-color: indigo;
+    padding: 15px;
+    letter-spacing: 3px;
+}
+
 .hide {
     display: none;
 }
